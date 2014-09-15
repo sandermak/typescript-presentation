@@ -1,0 +1,56 @@
+body {
+    padding: 3em;
+    font-family: sans-serif;
+    color: white;
+
+}
+.background {
+    background-image: url("img/concertbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#concertscontainer:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 3px;
+    background: whitesmoke;
+    opacity: 0.3;
+    width: 50%;
+}
+#concertscontainer {
+    position: relative;
+    opacity: 1;
+    padding: 1em;
+}
+
+#concertscontainer ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#concertscontainer ul li {
+    cursor: pointer;
+    padding: 1em;
+    display: inline;
+}
+#concertscontainer ul li:hover {
+    background: gray;
+}
+
+.concerttemplate {
+    visibility: hidden;
+}
+
+img {
+    border:10px outset silver
+}
+
+input[type=number] {
+    width: 4em;
+}

@@ -1,0 +1,5 @@
+*.map
+.idea
+*.iml
+*.js
+!jquery.js
