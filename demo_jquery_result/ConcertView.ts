@@ -1,6 +1,4 @@
-/// <reference path="ConcertService.ts" />
 /// <reference path="ConcertController.ts" />
-
 
 module ConcertView {
     export var renderConcerts = (concerts: Concert.ConcertSummary[]) => {
