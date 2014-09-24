@@ -1,0 +1,8 @@
+{
+    "name":"angular-typescript",
+    "dependencies":{
+        "angular":"1.2.18",
+        "angular-ui-router":"0.2.10",
+        "requirejs":"2.1.11"
+    }
+}
