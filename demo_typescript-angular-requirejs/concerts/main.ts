@@ -14,4 +14,4 @@ require.config({
     }
 });
 
-require(['app']);
+require(['concerts']);
