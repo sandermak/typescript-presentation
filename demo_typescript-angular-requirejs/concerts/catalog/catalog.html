@@ -1,20 +1,21 @@
 <div id="concertscontainer">
     <ul id="concerts">
-        <li ng-repeat="concert in ctrl.concerts">{{ concert. </li>
+        <li ng-repeat="concert in ctrl.concerts"
+            ng-click="ctrl.selectConcert(concert.id)">{{ concert.artist }}</li>
     </ul>
 </div>
 <br>
 
-<div id="selectedconcert"><i>Please select a concert</i></div>
+<i ng-if="!ctrl.selectedConcert">Please select a concert</i>
 
-<div class="concerttemplate">
-    <img src="img/sting.jpg">
+<div ng-if="ctrl.selectedConcert" class="concerttemplate">
+    <img ng-src="{{ ctrl.selectedConcert.imgUrl }}">
     <br>
-    <i class="desc">description</i>
+    <i class="desc">{{ ctrl.selectedConcert.desc }}</i>
     <br>
     <br>
-    $ <span class="price">10</span>
+    $ <span class="price">{{ ctrl.selectedConcert.price }}</span>
     <input type="number" value="1">
-    <input type="submit" value="Book now!">
+    <input ng-click="ctrl.book()" type="submit" value="Book now!">
 </div>
 

@@ -15,8 +15,14 @@ export class CatalogService {
 
     constructor(private $http: ng.IHttpService) {}
 
-    getConcerts(): ng.IPromise<ConcertSummary> {
-      return this.$http.get('data/concerts.json').then((response) => response.data)
+    getConcerts(): ng.IPromise<ConcertSummary[]> {
+      return this.$http.get('data/concerts.json')
+                .then((response) => response.data)
+    }
+
+    getConcert(id: string): ng.IPromise<Concert> {
+       return this.$http.get('data/concert' + id + '.json')
+                 .then(response => response.data)
     }
 
 }

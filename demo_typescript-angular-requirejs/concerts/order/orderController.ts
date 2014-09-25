@@ -1,4 +1,4 @@
-class Module2Controller {
+class OrderController {
     static $inject =  ['$http']
     myvalue: string
     
@@ -19,4 +19,4 @@ class Module2Controller {
 
 }
 
-export = Module2Controller;
+export = OrderController;

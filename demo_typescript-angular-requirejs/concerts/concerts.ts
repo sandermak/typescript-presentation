@@ -2,9 +2,9 @@
 
 import angular = require('angular');
 import catalog = require('catalog/catalog');
-import module2 = require('module2/module2');
+import order = require('order/order');
 
-var angular_dependencies = ['ui.router', catalog.name, module2.name];
+var angular_dependencies = ['ui.router', catalog.name, order.name];
 
 var ngModule: ng.IModule = angular.module('concerts', angular_dependencies);
 

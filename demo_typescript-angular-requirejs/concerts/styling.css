@@ -43,10 +43,6 @@ body {
     background: gray;
 }
 
-.concerttemplate {
-    visibility: hidden;
-}
-
 img {
     border:10px outset silver
 }
