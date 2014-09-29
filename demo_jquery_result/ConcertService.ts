@@ -18,7 +18,6 @@ module Concert {
         }
 
         public getConcert(id: string): JQueryPromise<Concert> {
-            // TODO call API with id
             return $.getJSON('data/concert' + id + '.json')
         }
     }
