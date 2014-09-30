@@ -15,7 +15,7 @@
     <br>
     <br>
     $ <span class="price">{{ ctrl.selectedConcert.price }}</span>
-    <input type="number" value="1">
+    <input ng-model="ctrl.tickets" type="number" value="1">
     <input ng-click="ctrl.book()" type="submit" value="Book now!">
 </div>
 

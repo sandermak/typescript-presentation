@@ -4,6 +4,7 @@ class CatalogController {
 
     static $inject =  ['CatalogService', '$state']
 
+    tickets: number
     concerts: catalogsvc.ConcertSummary[]
     selectedConcert: catalogsvc.Concert;
 
@@ -18,7 +19,7 @@ class CatalogController {
     }
 
     book(): void {
-        this.state.go('order', { concert: this.selectedConcert});
+        this.state.go('order', { artist: this.selectedConcert.artist, tickets: this.tickets });
     }
 
 }

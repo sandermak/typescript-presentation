@@ -1,20 +1,13 @@
 class OrderController {
-    static $inject =  ['$http']
-    myvalue: string
-    
-    constructor(private $http: ng.IHttpService) {
-      this.myvalue = 'Hi!'
-    }
+    static $inject =  ['$stateParams']
+    artist: string
+    tickets: number
 
-    click() {
-      this.helperFunction();
-      this.$http.get('data.json').success(
-        (data) => this.myvalue = data.result
-      )
-    }
-
-    private helperFunction() {
-        console.log("In helper functio.")
+    constructor(private $stateParams: ng.ui.IStateParamsService) {
+        console.log($stateParams)
+        this.artist = $stateParams['artist']
+        this.tickets = parseInt($stateParams['tickets'])
+        console.log("tickets", this.tickets)
     }
 
 }

@@ -8,7 +8,7 @@ var ngModule: ng.IModule = angular.module('order', ['ui.router']);
 
 ngModule.config([ '$stateProvider', ($stateProvider) => {
   $stateProvider.state('order', {
-    url: '/order',
+    url: '/order?tickets?artist',
     templateUrl: 'order/order.html',
     controller: 'OrderController as ctrl'
   });

@@ -3,11 +3,13 @@ export var concertOrder = ['$window', ($window) => {
   return {
     restrict: 'E',
     scope : {
-            value: "=value"
+            artist: "=artist",
+            tickets: "=tickets"
     },
-    replace: false,
+    replace: true,
+    templateUrl: "order/orderDetail.html",
     link: function (scope, element, attrs) {
-      element.text('Value in directive2: ' + scope.value)
+
     }
   }
   
