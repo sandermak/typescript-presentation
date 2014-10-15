@@ -6,7 +6,6 @@ module Concert {
         artist: string
     }
     export interface Concert extends ConcertSummary {
-        artist: string
         price: number
         imgUrl: string
         desc: string
